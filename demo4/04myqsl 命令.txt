@@ -1,0 +1,31 @@
+mysql -h110.110.110.110 -u root -p 123;//登陆
+create database xhkdb;创建数据库
+show databases;显示数据库
+drop database xhkdb;删除名为 xhkdb的数据库
+use xhkdb;如果xhkdb数据库存在，尝试存取它：
+select database();当前选择的数据库
+建表 :
+create table msg (
+id int primary key auto_increment,
+title varchar(20),
+content varchar(100)
+) charset utf8;
+<----插入数据---->
+insert into user (uid,name,age) values (1,'lisi',23);
+insert into user (uid,name) values (2,'lucy');
+insert into user (name) values ('yumi');
+insert into user values (4,'kimi',25);
+insert into user values (5,'test1',44),(6,'test2',23),(7,'test3',18);
+<----更新数据---->
+update user set age=99 where name='yumi';
+update user set age=23,name='nobody' where uid=2;
+update user set name='mingming',age=55;// 不加 where 条件会全更，建议开启mysql新手模式
+<----删除数据---->
+delete from user where uid=7;
+delete from user;// 不加 where 条件会全删，建议开启mysql新手模式
+<----查询数据---->
+select * from user;
+select * from user where uid=2;
+select * from user where uid>=2;
+select uid,name from user where uid>=2;
+select name from user where uid=2;
