@@ -1,0 +1,20 @@
+git 命令
+
+1、报名号
+	$ git config --global user.name  kinggod # 你是谁
+	$ git config --global user.email 1079257074@qq.com # 怎么联系你
+2、创建版本库
+	$ cd E:/ #进入目录
+	$ mkdir test #创建文件夹
+	$ git init #创建版本库（目录下.git文件夹勿动）
+3、添加文件
+	$ git add index.php #添加文件
+	$ git commit -m " 新建 index.php" #编辑备注
+	$ git status #查看状态
+4、删除文件
+	$ touch foo.php #创建 foo.php
+	$ git rm foo.php #删除文件
+5、把代码推到远程仓库
+	$ git remote add origin https://git.oschina.net/lianshou/test.git #为远程地址创建origin的别名
+	$ git push origin master #把本地项目推到别名为origin的远程
+	$ git push https://git.oschina.net/lianshou/test.git master #直接推到远程
